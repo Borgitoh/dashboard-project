@@ -1,0 +1,133 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="noZ-index col-md-2 d-none d-md-block bg-light sidebar mt-1">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <i class="fa fa-tachometer"></i> Desempenho Acadêmico e Taxas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Admissões e Matrículas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Finanças e Investimentos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Pesquisa e Publicações
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Empregabilidade
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Satisfação e Feedback
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa fa-file-text"></i> Demografia
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+      </div>
+
+      <!-- Top widgets -->
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 d-flex align-items-center">
+              <div class="icon-container bg-primary text-white">
+                <i class="fa fa-users custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>200</h2>
+                  <p>Total de Estudante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-info text-white">
+                <i class="fa fa-cogs custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>80</h2>
+                  <p>Estudante Matriculado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-warning text-white">
+                <i class="fa fa-shopping-cart custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class=" text-center card-text">
+                  <h2>90</h2>
+                  <p>Numero de Reprovado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-danger text-white">
+                <i class="fa fa-truck custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>2</h2>
+                  <p>Desistente</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="row">
+        <div class="col">
+          <canvas
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+          >
+          </canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
