@@ -57,4 +57,8 @@ export class EmployabilityComponent implements OnInit {
       borderWidth: 1
     }
   ];
+
+  public printPage(): void {
+    window.print();
+  }
 }

@@ -85,4 +85,8 @@ export class FinanceComponent implements OnInit {
     }
   ];
 
+  public printPage(): void {
+    window.print();
+  }
+
 }

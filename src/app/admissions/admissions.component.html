@@ -1,5 +1,8 @@
 <div class="container">
   <h2>Admissões e Matrículas</h2>
+  <button (click)="printPage()" class="btn btn-secondary no-print">
+    Imprimir Gráficos
+  </button>
   <div style="display: block;">
     <canvas baseChart
             [datasets]="groupedBarChartData"

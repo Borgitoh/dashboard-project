@@ -1,25 +1,35 @@
 <div class="container">
   <h2>Demografia</h2>
 
-  <h3>Gráficos de Pizza</h3>
-  <div style="display: block;">
-    <canvas baseChart
-            [datasets]="pieChartData"
-            [labels]="pieChartLabels"
-            [options]="pieChartOptions"
-            [legend]="pieChartLegend"
-            [chartType]="pieChartType">
-    </canvas>
-  </div>
+  <button (click)="exportToExcel()" class="btn btn-primary no-print">
+    Exportar Gráficos para Excel
+  </button>
 
-  <h3>Gráficos de Área</h3>
-  <div style="display: block;">
-    <canvas baseChart
-            [datasets]="areaChartData"
-            [labels]="areaChartLabels"
-            [options]="areaChartOptions"
-            [legend]="areaChartLegend"
-            [chartType]="areaChartType">
-    </canvas>
+  <button (click)="printPage()" class="btn btn-secondary no-print">
+    Imprimir Gráficos
+  </button>
+
+  <div id="print-section">
+    <h3>Gráficos de Pizza</h3>
+    <div style="display: block;">
+      <canvas baseChart
+              [datasets]="pieChartData"
+              [labels]="pieChartLabels"
+              [options]="pieChartOptions"
+              [legend]="pieChartLegend"
+              [chartType]="pieChartType">
+      </canvas>
+    </div>
+
+    <h3>Gráficos de Área</h3>
+    <div style="display: block;">
+      <canvas baseChart
+              [datasets]="areaChartData"
+              [labels]="areaChartLabels"
+              [options]="areaChartOptions"
+              [legend]="areaChartLegend"
+              [chartType]="areaChartType">
+      </canvas>
+    </div>
   </div>
 </div>

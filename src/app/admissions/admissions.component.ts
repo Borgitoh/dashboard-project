@@ -62,4 +62,7 @@ export class AdmissionsComponent implements OnInit {
       fill: true,
     }
   ];
+  public printPage(): void {
+    window.print();
+  }
 }

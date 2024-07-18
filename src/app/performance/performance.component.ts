@@ -37,4 +37,7 @@ export class PerformanceComponent implements OnInit {
     { data: [45, 55, 65, 75, 85], label: 'Taxa de Aprovação' }
   ];
 
+  public printPage(): void {
+    window.print();
+  }
 }

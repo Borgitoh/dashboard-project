@@ -9,3 +9,10 @@ h2, h3 {
 canvas {
   max-width: 100%;
 }
+
+/* Estilos para ocultar elementos durante a impressão */
+@media print {
+  .no-print {
+    display: none;
+  }
+}

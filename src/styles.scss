@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Estilos para ocultar elementos durante a impressão */
+@media print {
+    .no-print {
+      display: none;
+    }
+  }

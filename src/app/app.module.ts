@@ -12,6 +12,7 @@ import { EmployabilityComponent } from './employability/employability.component'
 import { SatisfactionComponent } from './satisfaction/satisfaction.component';
 import { DemographicsComponent } from './demographics/demographics.component';
 import { HomeComponent } from './home/home.component';
+import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]
