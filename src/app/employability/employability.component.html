@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Empregabilidade</h2>
+
+  <h3>Gráficos de Barra</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+    </canvas>
+  </div>
+
+  <h3>Gráficos de Rosca</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [options]="doughnutChartOptions"
+            [legend]="doughnutChartLegend"
+            [chartType]="doughnutChartType">
+    </canvas>
+  </div>
+</div>

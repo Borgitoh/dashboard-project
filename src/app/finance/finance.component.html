@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Finanças e Investimentos</h2>
+
+  <h3>Gráficos de Área Empilhada</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="stackedAreaChartData"
+            [labels]="stackedAreaChartLabels"
+            [options]="stackedAreaChartOptions"
+            [legend]="stackedAreaChartLegend"
+            [chartType]="stackedAreaChartType">
+    </canvas>
+  </div>
+
+  <h3>Gráficos de Barra Empilhada</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="stackedBarChartData"
+            [labels]="stackedBarChartLabels"
+            [options]="stackedBarChartOptions"
+            [legend]="stackedBarChartLegend"
+            [chartType]="stackedBarChartType">
+    </canvas>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Pesquisa e Publicações</h2>
+
+  <h3>Gráficos de Colunas Agrupadas</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="groupedColumnChartData"
+            [labels]="groupedColumnChartLabels"
+            [options]="groupedColumnChartOptions"
+            [legend]="groupedColumnChartLegend"
+            [chartType]="groupedColumnChartType">
+    </canvas>
+  </div>
+
+  <h3>Gráficos de Barras Horizontais</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="horizontalBarChartData"
+            [labels]="horizontalBarChartLabels"
+            [options]="horizontalBarChartOptions"
+            [legend]="horizontalBarChartLegend"
+            [chartType]="horizontalBarChartType">
+    </canvas>
+  </div>
+</div>

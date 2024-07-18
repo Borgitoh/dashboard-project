@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Admissões e Matrículas</h2>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="groupedBarChartData"
+            [labels]="groupedBarChartLabels"
+            [options]="groupedBarChartOptions"
+            [legend]="groupedBarChartLegend"
+            [chartType]="groupedBarChartType">
+    </canvas>
+  </div>
+
+  <h3>Gráficos de Dispersão</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="scatterChartData"
+            [labels]="scatterChartLabels"
+            [options]="scatterChartOptions"
+            [legend]="true"
+            [chartType]="scatterChartType">
+    </canvas>
+  </div>
+</div>
