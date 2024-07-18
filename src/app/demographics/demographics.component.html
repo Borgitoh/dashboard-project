@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Demografia</h2>
+
+  <h3>Gráficos de Pizza</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="pieChartData"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            [legend]="pieChartLegend"
+            [chartType]="pieChartType">
+    </canvas>
+  </div>
+
+  <h3>Gráficos de Área</h3>
+  <div style="display: block;">
+    <canvas baseChart
+            [datasets]="areaChartData"
+            [labels]="areaChartLabels"
+            [options]="areaChartOptions"
+            [legend]="areaChartLegend"
+            [chartType]="areaChartType">
+    </canvas>
+  </div>
+</div>

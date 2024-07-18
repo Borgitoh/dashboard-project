@@ -1,0 +1,83 @@
+
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+      </div>
+      <!-- Top widgets -->
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 d-flex align-items-center">
+              <div class="icon-container bg-primary text-white">
+                <i class="fa fa-users custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>200</h2>
+                  <p>Total de Estudante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-info text-white">
+                <i class="fa fa-cogs custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>80</h2>
+                  <p>Estudante Matriculado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-warning text-white">
+                <i class="fa fa-shopping-cart custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class=" text-center card-text">
+                  <h2>90</h2>
+                  <p>Numero de Reprovado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3 custom-card">
+            <div class="p-0 card-body d-flex align-items-center">
+              <div class="icon-container bg-danger text-white">
+                <i class="fa fa-truck custom-icon"></i>
+              </div>
+              <div class="ml-3 text-container">
+                <div class="text-center card-text">
+                  <h2>2</h2>
+                  <p>Desistente</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="row">
+        <div class="col">
+          <canvas
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+          >
+          </canvas>
+        </div>
+      </div>
