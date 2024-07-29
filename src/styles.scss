@@ -3,6 +3,10 @@
 /* Estilos para ocultar elementos durante a impressão */
 @media print {
     .no-print {
-      display: none;
+      display: none !important;
     }
   }
+
+.sombra{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

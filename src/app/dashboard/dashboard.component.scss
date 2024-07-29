@@ -38,3 +38,13 @@
   font-size: 1rem;
   margin: 0;
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+
+  }
+  .no-sombra{
+    box-shadow: none !important;
+  }
+}
