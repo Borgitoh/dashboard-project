@@ -12,17 +12,17 @@ export class PerformanceComponent implements OnInit {
   ngOnInit() {
   }
 
-   // Dados para o gráfico de barras
-   public barChartOptions = {
+  // Dados para o gráfico de barras
+  public barChartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels = ['Curso A', 'Curso B', 'Curso C', 'Curso D'];
+  public barChartLabels = ['Engenharia Informática', 'Engenharia Civil', 'Psicologia', 'Direito'];
   public barChartType = 'bar';
   public barChartLegend = true;
   public barChartData = [
-    { data: [75, 85, 95, 70], label: 'Média de Notas' },
-    { data: [5, 10, 7, 15], label: 'Taxa de Reprovação' }
+    { data: [7500, 8500, 9500, 7000], label: 'Média de Notas' },
+    { data: [500, 1000, 700, 1500], label: 'Taxa de Reprovação' }
   ];
 
   // Dados para o gráfico de linha
@@ -33,8 +33,11 @@ export class PerformanceComponent implements OnInit {
   public lineChartType = 'line';
   public lineChartLegend = true;
   public lineChartData = [
-    { data: [50, 60, 70, 80, 90], label: 'Taxa de Graduação' },
-    { data: [45, 55, 65, 75, 85], label: 'Taxa de Aprovação' }
+    { data: [5000, 6000, 7000, 8000, 9000], label: 'Taxa de Graduação' },
+    { data: [4500, 5500, 6500, 7500, 8500], label: 'Taxa de Aprovação' }
   ];
 
+  public printPage(): void {
+    window.print();
+  }
 }

@@ -15,13 +15,18 @@ export class AdmissionsComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public groupedBarChartLabels = ['Curso A', 'Curso B', 'Curso C', 'Curso D'];
+  public groupedBarChartLabels = ['Engenharia Informática', 'Engenharia Civil', 'Psicologia', 'Direito'];
   public groupedBarChartType = 'bar';
   public groupedBarChartLegend = true;
   public groupedBarChartData = [
     { data: [150, 200, 180, 120], label: 'Inscrições' },
-    { data: [100, 140, 130, 90], label: 'Matrículas' }
+    { data: [100, 140, 130, 90], label: 'Matrículas' },
+    { data: [80, 120, 100, 110], label: 'Propina Regularizada' },
+    { data: [60, 80, 70, 60], label: 'Propina Não Regularizada' },
+    { data: [20, 30, 25, 15], label: 'Multas' },
+    { data: [10, 20, 15, 25], label: 'Dívidas' }
   ];
+
 
   // Dados para o gráfico de dispersão
   public scatterChartOptions = {
@@ -60,6 +65,35 @@ export class AdmissionsComponent implements OnInit {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
       fill: true,
+    },
+    {
+      data: [
+        { x: 18, y: 20 },
+        { x: 19, y: 25 },
+        { x: 20, y: 30 },
+        { x: 21, y: 35 },
+        { x: 22, y: 40 },
+        { x: 23, y: 45 },
+        { x: 24, y: 50 },
+        { x: 25, y: 55 },
+        { x: 26, y: 60 },
+        { x: 27, y: 65 },
+        { x: 28, y: 70 },
+        { x: 29, y: 75 },
+        { x: 30, y: 80 }
+      ],
+      label: 'Propinas Não Regularizadas',
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255, 99, 132, 1)',
+      pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255, 99, 132, 1)',
+      fill: true,
     }
   ];
+
+  public printPage(): void {
+    window.print();
+  }
 }

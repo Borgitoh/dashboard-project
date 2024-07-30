@@ -56,4 +56,7 @@ export class SatisfactionComponent implements OnInit {
     }
   ];
 
+  public printPage(): void {
+    window.print();
+  }
 }

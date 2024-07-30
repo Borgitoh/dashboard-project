@@ -12,8 +12,8 @@
               </div>
               <div class="ml-3 text-container">
                 <div class="text-center card-text">
-                  <h2>200</h2>
-                  <p>Total de Estudante</p>
+                  <h2>{{ totalEstudantes | number:'1.0-0' }}</h2>
+                  <p>Total de Estudantes</p>
                 </div>
               </div>
             </div>
@@ -27,8 +27,8 @@
               </div>
               <div class="ml-3 text-container">
                 <div class="text-center card-text">
-                  <h2>80</h2>
-                  <p>Estudante Matriculado</p>
+                  <h2>{{ estudantesMatriculados | number:'1.0-0' }}</h2>
+                  <p>Estudantes Matriculados</p>
                 </div>
               </div>
             </div>
@@ -41,9 +41,9 @@
                 <i class="fa fa-shopping-cart custom-icon"></i>
               </div>
               <div class="ml-3 text-container">
-                <div class=" text-center card-text">
-                  <h2>90</h2>
-                  <p>Numero de Reprovado</p>
+                <div class="text-center card-text">
+                  <h2>{{ numeroReprovados | number:'1.0-0' }}</h2>
+                  <p>Número de Reprovados</p>
                 </div>
               </div>
             </div>
@@ -57,14 +57,15 @@
               </div>
               <div class="ml-3 text-container">
                 <div class="text-center card-text">
-                  <h2>2</h2>
-                  <p>Desistente</p>
+                  <h2>{{ desistentes | number:'1.0-0' }}</h2>
+                  <p>Desistentes</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
 
       <!-- Chart -->
       <div class="row">

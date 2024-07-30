@@ -60,5 +60,7 @@ export class ResearchComponent implements OnInit {
     }
   ];
 
-
+  public printPage(): void {
+    window.print();
+  }
 }

@@ -1,25 +1,30 @@
 <div class="container">
   <h2>Desempenho Acadêmico e Taxas</h2>
+  <button (click)="printPage()" class="btn btn-secondary no-print" >
+    Imprimir Gráficos
+  </button>
+  <div id="print-section">
+    <h3>Gráficos de Barras</h3>
+    <div style="display: block;">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+      </canvas>
+    </div>
 
-  <h3>Gráficos de Barras</h3>
-  <div style="display: block;">
-    <canvas baseChart
-            [datasets]="barChartData"
-            [labels]="barChartLabels"
-            [options]="barChartOptions"
-            [legend]="barChartLegend"
-            [chartType]="barChartType">
-    </canvas>
+    <h3>Gráficos de Linha</h3>
+    <div style="display: block;">
+      <canvas baseChart
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType">
+      </canvas>
+    </div>
   </div>
 
-  <h3>Gráficos de Linha</h3>
-  <div style="display: block;">
-    <canvas baseChart
-            [datasets]="lineChartData"
-            [labels]="lineChartLabels"
-            [options]="lineChartOptions"
-            [legend]="lineChartLegend"
-            [chartType]="lineChartType">
-    </canvas>
-  </div>
 </div>

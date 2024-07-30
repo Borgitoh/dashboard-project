@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as XLSX from 'xlsx';
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-demographics',
   templateUrl: './demographics.component.html',
@@ -55,5 +57,30 @@ export class DemographicsComponent implements OnInit {
       borderWidth: 1
     }
   ];
+
+   // Método para imprimir a página
+   public printPage(): void {
+    window.print();
+  }
+
+
+  // Método para exportar gráficos para Excel
+  public exportToExcel(): void {
+    // Captura os gráficos como imagens
+    const charts = document.querySelectorAll('canvas');
+    const promises = Array.from(charts).map(chart => html2canvas(chart));
+
+    Promise.all(promises).then(canvasArray => {
+      const wb = XLSX.utils.book_new();
+      canvasArray.forEach((canvas, index) => {
+        const imgData = canvas.toDataURL('image/png');
+        const ws = XLSX.utils.aoa_to_sheet([['Graph ' + (index + 1)]]);
+        XLSX.utils.sheet_add_aoa(ws, [['']], { origin: 'A2' });
+        ws['!images'] = [{ image: imgData, range: { s: { r: 1, c: 0 }, e: { r: 10, c: 10 } } }];
+        XLSX.utils.book_append_sheet(wb, ws, 'Graph ' + (index + 1));
+      });
+      XLSX.writeFile(wb, 'DemographicsGraphs.xlsx');
+    });
+  }
 
 }
