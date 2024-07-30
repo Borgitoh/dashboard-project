@@ -1,3 +1,10 @@
 .bg-logo{
   background-color: rgb(207,182,115) !important;
 }
+
+@media print {
+  .no-shadow{
+    box-shadow: none !important;
+    margin-bottom: 30px;
+  }
+}
