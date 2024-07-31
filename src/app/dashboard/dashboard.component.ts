@@ -11,12 +11,18 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  showMenu:boolean = false;
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Propina Regularizada' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Propina não Regularizada' }
   ];
 
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+  menu(){
+    this.showMenu = !this.showMenu;
+  }
 
   public lineChartOptions: any = {
     responsive: true

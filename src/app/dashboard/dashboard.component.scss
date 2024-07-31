@@ -48,3 +48,42 @@
     box-shadow: none !important;
   }
 }
+/* Estilos para o botão de menu */
+.btn-menu {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Esconde o sidebar em telas pequenas */
+  #sidebar {
+    display: none;
+  }
+
+  /* Mostra o botão de menu em telas pequenas */
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Mostra o sidebar quando ativado por JavaScript */
+  #sidebar.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1500;
+    overflow-y: auto;
+  }
+
+  /* Ajusta o main content para evitar sobreposição */
+  main {
+    margin-top: 50px; /* Ajuste conforme a altura do seu menu em dispositivos móveis */
+  }
+}

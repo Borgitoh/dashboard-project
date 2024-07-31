@@ -1,7 +1,12 @@
 <div class="container-fluid">
   <div class="row">
+    <!-- Botão de menu para dispositivos móveis -->
+    <button id="menu-toggle" class="d-md-none btn btn-menu" (click)="menu()">
+      <i class="fa fa-bars"></i>
+    </button>
+
     <!-- Sidebar -->
-    <nav id="sidebar" class="no-sombra no-print noZ-index col-md-2 d-none d-md-block sombra sidebar mt-1">
+    <nav id="sidebar" [ngClass]="showMenu ? 'active' : ''"  class="no-sombra no-print noZ-index col-md-2 d-md-block sombra sidebar mt-1">
       <div class="position-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -20,7 +25,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="research" >
+            <a class="nav-link" routerLink="research">
               <i class="fa fa-file-text"></i> Pesquisa e Publicações
             </a>
           </li>
