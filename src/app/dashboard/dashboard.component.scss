@@ -10,6 +10,18 @@
   transform: translateY(-5px);
 }
 
+.nav-item{
+  margin-top: 15px;
+}
+
+.nav-item{
+  .nav-link{
+    i{
+      font-size: x-large;
+    }
+  }
+}
+
 .icon-container {
   display: flex;
   align-items: center;
