@@ -66,11 +66,11 @@
         </div>
       </div>
 
-
       <!-- Chart -->
       <div class="row">
         <div class="col">
-          <canvas height="300"
+          <div class="hidenIphone">
+            <canvas
             baseChart
             [datasets]="lineChartData"
             [labels]="lineChartLabels"
@@ -80,5 +80,18 @@
             [chartType]="lineChartType"
           >
           </canvas>
+          </div>
+          <div class="showIphone">
+            <canvas height="300"
+            baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+          >
+          </canvas>
+          </div>
         </div>
       </div>

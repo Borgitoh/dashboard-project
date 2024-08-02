@@ -3,8 +3,17 @@
   <button (click)="printPage()" class="btn btn-secondary no-print">
     Imprimir Gráficos
   </button>
-  <div style="display: block;">
-    <canvas baseChart  height="300"
+  <div class="hidenIphone">
+    <canvas baseChart
+            [datasets]="groupedBarChartData"
+            [labels]="groupedBarChartLabels"
+            [options]="groupedBarChartOptions"
+            [legend]="groupedBarChartLegend"
+            [chartType]="groupedBarChartType">
+    </canvas>
+  </div>
+  <div class="showIphone">
+    <canvas baseChart height="300"
             [datasets]="groupedBarChartData"
             [labels]="groupedBarChartLabels"
             [options]="groupedBarChartOptions"
@@ -14,8 +23,17 @@
   </div>
 
   <h3>Gráficos de Dispersão</h3>
-  <div style="display: block;">
+  <div class="hidenIphone">
     <canvas baseChart height="300"
+            [datasets]="scatterChartData"
+            [labels]="scatterChartLabels"
+            [options]="scatterChartOptions"
+            [legend]="true"
+            [chartType]="scatterChartType">
+    </canvas>
+  </div>
+  <div class="showIphone">
+    <canvas baseChart
             [datasets]="scatterChartData"
             [labels]="scatterChartLabels"
             [options]="scatterChartOptions"
